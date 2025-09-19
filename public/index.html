@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lofi Study (Simple)</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lofi Study</h1>
+      <nav>
+        <button data-page="focus">Focus</button>
+        <button data-page="notes">Notes</button>
+        <button data-page="tasks">Tasks</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="page-focus" class="page visible">
+        <h2>Focus Timer</h2>
+        <div id="time">25:00</div>
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+      </section>
+
+      <section id="page-notes" class="page">
+        <h2>Notes</h2>
+        <textarea id="notes" placeholder="Write notes..."></textarea>
+        <button id="saveNotes">Save Notes</button>
+        <p class="hint">Saved locally (no backend yet).</p>
+      </section>
+
+      <section id="page-tasks" class="page">
+        <h2>Tasks</h2>
+        <div class="task-input">
+          <input id="taskText" placeholder="New task..." />
+          <button id="addTask">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+        <p class="hint">Saved locally (no backend yet).</p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
